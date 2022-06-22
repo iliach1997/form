@@ -1,0 +1,17 @@
+{
+    "name": "chapi/app",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "iliach1997",
+            "email": "90194981+iliach1997@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}

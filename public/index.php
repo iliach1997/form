@@ -1,7 +1,8 @@
+<?php
+// starting public folder localhost:8080
 
-<?php 
-$pdo=new PDO('mysql:host=localhost;dbname=forms-crud','root','');
-$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$pdo = require_once '../database.php';
+
 $statement=$pdo->prepare('SELECT * FROM forms ORDER BY create_date DESC');
 $statement->execute();
 $forms=$statement->fetchAll(PDO::FETCH_ASSOC);
@@ -43,40 +44,12 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
 
 
-
-
-
-
-
-
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Document</title>
-</head>
+<?php require_once '../views/partials/header.php'; ?>
 
-<body class="body-box">
-    <section id="ilo">
-<div class="box">
 
-<form  class="name-form" method="post">
-    <label>First Name</label>
-    <input type="text" placeholder="" name="name" value="<?php echo $name?>">
-    <label>Last Name</label>
-    <input type="text" placeholder="" name="surname" value="<?php echo $surname?>">
-    <label>Email</label>
-    <input type="email" placeholder="" name="email" value="<?php echo $email?>">
-    <button type="submit"  class="submit">Submit</button>
-</form>
-
-</div>
+<section ><h1>Sing Up</h1> 
+ <?php require_once '../views/products/Form.php'; ?>
 </section>
 <section>
 <div class="table-box">
@@ -100,7 +73,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             <td><div class="th-div"><?php echo $form['surname'] ?></div></td>
             <td><div class="th-div"><?php echo $form['email'] ?></div></td>
             <td>
-                <button class="edit-button" >Edit</button>
+                <button class="edit-button" ><a href="update.php?id=<?php echo $form['id']?>">Edit</a></button>
             <form method="post" action="delete.php" class="button-form">
                 <input type="hidden" name="id" value="<?php echo $form['id']?>"/>
                 <button  class="delete-button">Delete</button>

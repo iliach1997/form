@@ -1,6 +1,5 @@
 <?php
-$pdo=new PDO('mysql:host=localhost;dbname=forms-crud','root','');
-$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$pdo = require_once '../database.php';
 $id=$_POST['id']??null;
 if(!$id){
     header('location:index.php');
