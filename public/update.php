@@ -5,7 +5,7 @@ if(!$id){
     header('location:index.php');
     exit;
 }
-
+// Update according to ID
 $pdo = require_once '../database.php';
 $statement=$pdo->prepare('SELECT * FROM forms WHERE id=:id');
 $statement->bindValue(':id',$id);
@@ -16,12 +16,12 @@ $errors=[];
 $name=$form['name'];
 $surname=$form['surname'];
 $email=$form['email'];
-
+// Check POST
 if($_SERVER['REQUEST_METHOD']==='POST'){
   $name=$_POST['name'];
   $surname=$_POST['surname'];
   $email=$_POST['email'];
-  
+  // Check errors
   if(!$name){
     $errors[]='User Name is required';
   }
