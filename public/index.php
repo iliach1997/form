@@ -57,6 +57,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
 <!-- import form -->
  <?php require_once '../views/products/Form.php'; ?>
+
 </section>
 <!-- table section -->
 <section>

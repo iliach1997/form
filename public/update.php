@@ -43,16 +43,14 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
   $state->execute();
   header('Location:index.php');
 } 
-  //  echo '<pre>';
-  //  var_dump($errors);
-  //  echo '<pre>';
+
 }
 
-
+ 
 ?>
-
-
+<!--import header -->
 <?php require_once '../views/partials/header.php'; ?>
+<!-- import form -->
 <?php require_once '../views/products/Form.php';?>
 
 </body>

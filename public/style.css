@@ -18,6 +18,10 @@ body{
     flex-direction: column; 
    
 }
+.form-error{
+    width: 200px;
+    color: red;
+}
 .button-form{
     display: inline-block;
 }
