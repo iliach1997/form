@@ -1,0 +1,135 @@
+@primery-color:#c76538;
+@color:aqua;
+@firstcolor: aliceblue;
+@secondcolor: black;
+@background-color:red ;
+@firstbackground-color: #59b256 ;
+@secondbackground-color:coral;
+@firstwidth:500px;
+@maxwidth: 1200px;
+@tablewidth:300px;
+@buttomwidth:100px;
+@buttomheight:25px;
+@secondwidth: 200px;
+@firstheight:600px;
+@secondheight:45px;
+@firstmargin-top: 50px;
+@firstfont-size: 16px;
+@secondfont-size:25px;
+@firstborder-radius:17px;
+
+body{
+    background-color: @primery-color;
+}
+.div-buttom{
+    display: flex;
+    margin-left: 90px;
+}
+a{
+    text-decoration: none;
+    color:@firstcolor ;
+}
+.table_td{
+    width: @tablewidth;
+    font-size: @secondfont-size;
+    color: @background-color;
+}
+.error-div{
+    
+    display: flex;
+    justify-content: center;
+    color: @firstcolor;
+}
+.edit-button{
+    width: @buttomwidth;
+    height: @buttomheight;
+    color: @firstcolor;
+    background-color:@firstbackground-color ;
+    border-radius: 5px;
+    border-color: @firstcolor;
+    transition-property: all;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+.edit-button:hover{
+    background-color: @color;
+    color: @secondcolor;
+}
+.delete-button{
+    width: @buttomwidth;
+    height: @buttomheight;
+    margin-left: 5px;
+    color: @firstcolor;
+    background-color:@secondbackground-color;
+    border-color: @firstcolor;
+    border-radius: 5px;
+    transition-property: all;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+.delete-button:hover{
+    background-color:@background-color ;
+    color:@secondcolor;
+}
+.table-box{
+    width: @maxwidth;
+    margin: auto;
+    background-color: @firstcolor;
+}
+.submit{
+    width: @secondwidth;
+    height: @secondheight;
+    font-size: @firstfont-size;
+    margin: auto;
+    margin-top: 16px;
+    border-radius:@firstborder-radius;
+    background-color: @firstbackground-color;
+    color: @firstcolor;
+    border-color: @firstcolor;
+    transition-property: all;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+.submit:hover{
+    background-color: @color;
+    color: @secondcolor;
+}
+.box{
+    width: @firstwidth;
+    height: @firstheight;
+    display: flex;
+    margin: auto;
+    margin-top:@firstmargin-top;
+
+}
+.name-form{
+    width: @firstwidth;
+    height: @firstheight;
+    display: flex;
+
+    flex-direction: column; 
+   
+}
+.form-error{
+    width: @secondwidth;
+    color: @background-color;
+}
+.button-form{
+    display: inline-block;
+}
+label{
+    width: @firstwidth;
+    font-size: @secondfont-size;
+    color: @firstcolor;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+input{
+height: @secondheight;
+font-size: @secondfont-size;
+
+}
